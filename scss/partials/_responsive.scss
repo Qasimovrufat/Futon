@@ -1,6 +1,19 @@
+
+
+
 @media screen and  (max-width: 767px){
     .container{
         max-width: 720px !important;
+    }
+    .slider-content h1 {
+        font-size: 27px !important;
+    }
+    .slider-content h2 {
+        font-size: 30px !important;
+    }
+   
+    .slider-content {
+        padding-right: 15px !important;
     }
     .header{
         .curr-lang{
@@ -14,9 +27,14 @@
         }
     }
 }
+
 @media screen and   (max-width: 991px) and (min-width: 768px){
     .container {
         max-width: 720px !important;
+    }
+    .slider-content p {
+        width: 85% !important
+        ;
     }
     .header{
         .middle-wrap{

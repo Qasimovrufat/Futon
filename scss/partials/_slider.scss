@@ -1,3 +1,4 @@
+
 #slider-area{
     margin-top: 20px;
  
@@ -42,7 +43,13 @@
         padding-left: 100px;
         position: absolute;
         top: 52%;
+        *{
+            animation-duration: 1.3s;
+            animation-fill-mode: both;
+
+        }
         h1{
+            animation-delay: 0.7s;
             color: #fff;
             font-family: "Open Sans", sans-serif;
             font-size: 49px;
@@ -52,6 +59,7 @@
             text-transform: uppercase;
         }
         h2{
+            animation-delay: 1.0s;
             color: rgba(243, 241, 241, 1);
             font-family: "Open Sans", sans-serif;
             font-size: 38px;
@@ -61,10 +69,13 @@
             text-transform: uppercase;
         }
         p{
+            
+            animation-delay: 1.5s;
             color: #fff;
             font-size: 14px;
             margin: 0;
             width: 70%;
+            
         }
        }
       

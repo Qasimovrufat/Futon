@@ -45,6 +45,7 @@ $(document).ready(function () {
         margin: 10,
         item: 1,
         animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
         dots: false,
         responsive: {
             0: {
@@ -59,23 +60,22 @@ $(document).ready(function () {
         }
     });
 
-   new WOW().init();
-
-
-   $(".owl-carousel").on('changed.owl.carousel', function(event) {
- 
-})
-    $(".owl-nav button").click(function(){
-        $("h1").removeClass("bounceInDown")
-        $(".active h1").addClass("bounceInDown")
-        $("h2").removeClass("bounceInRight")
+    
+    $(".active .slider-content h1").addClass("bounceInDown")
+    $(".active h2").addClass("bounceInRight")
+    $(".active p").addClass("fadeIn")
+  
+    $(".owl-next, .owl-prev").click(function(){
+        $(".slider-content h1").removeClass("bounceInDown").addClass("animated")
+        $(".active .slider-content h1").addClass("bounceInDown")
+        $("h2").removeClass("bounceInRight").addClass("animated")
         $(".active h2").addClass("bounceInRight")
-        $("p").removeClass("fadeIn")
+        $("p").removeClass("fadeIn").addClass("animated")
         $(".active p").addClass("fadeIn")
         
     })
 
-    
+    new WOW().init();
  
 
 });
