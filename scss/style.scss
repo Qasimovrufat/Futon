@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
 }
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url(../fonts/RobotoCondensed-Regular.woff);
+}
 @keyframes mymove {
     from {top: 40px;}
     to {top: 0px;}
@@ -20,6 +24,11 @@ li{
 }
 a{
     text-decoration: none;
+    &:hover{
+        text-decoration: none;
+        
+    }
+   
 }
 h1,h2,h3,h4,h5,h6{
 
@@ -28,6 +37,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 400;
 }
 img{
+    vertical-align: middle;
     max-width: 100%;
 }
 body{
@@ -36,13 +46,12 @@ body{
     font-style: normal;
     font-size: 14px;
     color: #434343;
-    .container{
-        max-width: 1200px;
-    }
+  
 }
 
     @import 'partials/header';
     @import 'partials/responsive';
     @import 'partials/slider';
     @import 'partials/banner';
+    @import 'partials/content-wrapper';
     
