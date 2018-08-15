@@ -117,8 +117,113 @@ $(document).ready(function () {
         var activeTab=$(this).attr("href");
         $(activeTab).show();
     })
-    
-    
-  
-});
 
+
+    $('.brand-logo-active').owlCarousel({
+        loop: true,
+        nav: true,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        item: 5,
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 4
+            },
+            1000: {
+                items: 5
+            }
+        }
+    })
+    
+
+    $.scrollUp({
+        scrollText: '<i class="fa fa-angle-double-up"></i>',
+        easingType: 'linear',
+        scrollSpeed: 900,
+        animation: 'fade'
+    });
+
+    var CartPlusMinus = $('.cart-plus-minus');
+    CartPlusMinus.prepend('<div class="dec qtybutton">-</div>');
+    CartPlusMinus.append('<div class="inc qtybutton">+</div>');
+    $(".qtybutton").on("click", function() {
+        var $button = $(this);
+        var oldValue = $button.parent().find("input").val();
+        if ($button.text() === "+") {
+            var newVal = parseFloat(oldValue) + 1;
+        } else {
+            // Don't allow decrementing below zero
+            if (oldValue > 0) {
+                var newVal = parseFloat(oldValue) - 1;
+            } else {
+                newVal = 1;
+            }
+        }
+        $button.parent().find("input").val(newVal);
+    });
+
+    $('.quickview-active').owlCarousel({
+        loop: true,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        nav: true,
+        item: 3,
+        margin: 12,
+    })
+
+    var ProductDetailsSmall = $('.product-details-small a');
+    ProductDetailsSmall.on('click', function(e) {
+        e.preventDefault();
+        var $href = $(this).attr('href');
+        ProductDetailsSmall.removeClass('active');
+        $(this).addClass('active');
+        $('.product-details-large .tab-pane').removeClass('active');
+        $('.product-details-large ' + $href).addClass('active');
+    })
+
+    $('.count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 1000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+
+    $('.testimonial-active').owlCarousel({
+        loop: true,
+        nav: false,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        item: 1,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+
+ 
+})

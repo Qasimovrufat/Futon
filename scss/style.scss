@@ -5,15 +5,40 @@
     font-family: "Roboto Condensed";
     src: url(../fonts/RobotoCondensed-Regular.woff);
 }
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Regular.woff);
+}
+@font-face {
+    font-family: "Pe-icon-7-stroke";
+    src: url(../fonts/Pe-icon-7-strokebb1d.woff);
+}
 @keyframes mymove {
     from {top: 40px;}
     to {top: 0px;}
 }
-
+i:focus{
+    outline: none;
+}
+.quick-view a:focus{
+    outline: none;
+}
+p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #434343;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
 .row::after{
     content: '';
     display: block;
     clear: both;
+}
+ul{
+    margin: 0;
+    padding: 0;
 }
 a, .btn{
     transition: all 0.3s ease 0s;
@@ -48,10 +73,69 @@ body{
     color: #434343;
   
 }
+#scrollUp{
+    background: #ff8b60 none repeat scroll 0 0;
+    bottom: 85px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 15px !important;
+    display: none;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    right: 12px;
+    text-align: center;
+    width: 38px;
+    z-index: 9999;
+}
+
+               
+.red{
+    background: #DC143C none repeat scroll 0 0;
+}
+.blue{
+    background: #0000FE none repeat scroll 0 0;
+}
+.pink{
+    background: #FF017E none repeat scroll 0 0;
+}
+
+.page-title{
+    padding-top: 20px;
+    padding-bottom: 27px;
+
+    border-bottom: 1px solid #ebebeb;
+    .active-color{
+        color: #ff5313;
+    }
+    ul{
+
+        li{
+            color: #434343;
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 400;
+            padding-right: 9px;
+            text-transform: capitalize;
+          
+            a{
+                color: #434343;
+                padding-right: 8px;
+                &:hover{
+                    color: #ff5313;
+                }
+            }
+        }
+    } 
+}
 
     @import 'partials/header';
     @import 'partials/responsive';
     @import 'partials/slider';
     @import 'partials/banner';
     @import 'partials/content-wrapper';
-    
+    @import 'partials/brand-logo';
+    @import 'partials/footer';
+    @import 'partials/modal';
+    @import 'partials/about-page';

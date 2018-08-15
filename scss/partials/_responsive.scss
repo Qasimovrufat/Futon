@@ -3,7 +3,22 @@
 
 @media screen and  (max-width: 767px){
     .container{
-        max-width: 720px !important;
+        // max-width: 720px !important;
+    }
+    .middle{
+        .col-lg-8{
+
+            
+              
+                .middle-wrap{
+                    display: block !important;
+                    justify-content: center;
+                }
+            
+        }
+        .cart{
+            padding: 0 !important;
+        }
     }
     .slider-content h1 {
         font-size: 27px !important;
@@ -22,6 +37,9 @@
         .logo{
             margin: 0 0 20px;
         }
+        .search{
+            width: 100%;
+        }
         .middle .search{
             width: 100% !important;
         }
@@ -37,11 +55,23 @@
         ;
     }
     .header{
+        .top{
+            a{
+                padding: 2px 17px 7px !important;
+            }
+        }
+        .middle{
+            .col-lg-8{
+                .middle-wrap{
+                    justify-content: center;
+                }
+            }
+        }
         .middle-wrap{
             justify-content: center !important;
         }
         .curr-lang{
-            margin: 10px 0 0 25px !important; 
+            margin: 10px 0 0 30px !important; 
         }
         .logo{
             margin: 0 0 20px;
@@ -67,9 +97,7 @@
 
 
 @media screen and (max-width: 1299px) and (min-width: 1170px){
-    .container {
-        max-width: 1200px !important;
-    }
+  
     .header{
         .middle-wrap{
            
