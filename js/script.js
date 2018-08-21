@@ -225,5 +225,102 @@ $(document).ready(function () {
         }
     })
 
- 
+    $(".shop-area .shop-topbar .grid-options ul li").click(function(){
+        var $proStyle = $(this).data('view');
+        $(".shop-topbar .grid-options li").removeClass("active-color");
+        $(this).addClass("active-color");
+        $('.product-view').removeClass('product-grid product-list').addClass($proStyle);
+    
+    })
+
+    var sliderrange = $('#slider-range');
+    var amountprice = $('#amount');
+    $(function() {
+        sliderrange.slider({
+            range: true,
+            min: 0,
+            max: 1200,
+            values: [35, 540],
+            slide: function(event, ui) {
+                amountprice.val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        amountprice.val("$" + sliderrange.slider("values", 0) +
+            " - $" + sliderrange.slider("values", 1));
+    });
+
+  
+    $('.product-dec-slider').owlCarousel({
+        loop: true,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        nav: true,
+        item: 4,
+        margin: 12,
+        responsive: {
+            0: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+
+
+    $(".description-review-topbar a:first").addClass("active");
+    $(".description-review-bottom .tab-pane").removeClass("active")
+    $(".description-review-bottom .tab-pane:first").addClass("active")
+    $(".description-review-topbar a").click(function(e){
+        e.preventDefault()
+        $(".description-review-topbar a").removeClass("active");
+        $(this).addClass("active");
+        $(".tab-pane").removeClass("active")
+        var activeTab=$(this).attr("href");
+        $(activeTab).addClass("active");
+    })
+
+    $('.related-product-active').owlCarousel({
+        loop: true,
+        nav: false,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        item: 4,
+        margin: 30,
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            },
+            1170: {
+                items: 3
+            },
+            1300: {
+                items: 4
+            }
+        }
+    })
+
+    $("#zoompro").elevateZoom({
+		gallery : "gallery",
+		galleryActiveClass: "active",
+		zoomWindowWidth:600,
+		zoomWindowHeight:300,
+		scrollZoom : false,
+        zoomType : "inner",
+        cursor: "crosshair"
+	});  
+    
 })

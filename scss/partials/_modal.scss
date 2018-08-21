@@ -8,6 +8,91 @@
         outline: none;
     }
 }
+.product-quantity{
+    
+    margin: 0 0 16px;
+    overflow: hidden;
+    .cart-plus-minus{
+        height: 40px;
+        padding: 0;
+        position: relative;
+        width: 110px;
+        border: 1px solid #e5e5e5;
+        display: inline-block;
+        float: left;
+        input.cart-plus-minus-box{
+            color: #454545;
+            float: left;
+            font-size: 14px;
+            height: 40px;
+            margin: 0;
+            width: 110px;
+            background: transparent none repeat scroll 0 0;
+            border: medium none;
+           
+            text-align: center;
+           &:focus{
+            outline: none;
+           }
+        }
+        .qtybutton{
+            color: #454545;
+            cursor: pointer;
+            float: inherit;
+            font-size: 16px;
+            margin: 0;
+            position: absolute;
+            transition: all .3s ease 0s;
+           
+            
+            font-weight: 600;
+            
+            line-height: 20px;
+           
+            text-align: center;
+            width: 20px;
+            &:hover{
+                color: #ff5313;
+            }
+        }
+        .dec.qtybutton{
+            border-right: 1px solid #e5e5e5;
+            height: 40px;
+            left: 0;
+            padding-top: 8px;
+            top: 0;
+        }
+        .inc.qtybutton{
+            border-left: 1px solid #e5e5e5;
+            height: 40px;
+            right: 0;
+            padding-top: 9px;
+            top: 0;
+        }
+    }
+    button{
+        background: #333 none repeat scroll 0 0;
+        border: medium none;
+        border-radius: 3px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 700;
+        height: 40px;
+        letter-spacing: 0.025em;
+        line-height: 40px;
+        margin-left: 20px;
+        padding: 0 20px;
+        text-transform: uppercase;
+        transition: all 0.3s ease 0s;
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            background-color:#ff5313;
+        }
+    }
+}
 .modal-body{
     padding: 30px 50px;
     .owl-nav{
@@ -137,91 +222,7 @@
                
             }
         }
-        .product-quantity{
-            display: block;
-            margin: 0 0 16px;
-            overflow: hidden;
-            .cart-plus-minus{
-                height: 40px;
-                padding: 0;
-                position: relative;
-                width: 110px;
-                border: 1px solid #e5e5e5;
-                display: inline-block;
-                float: left;
-                input.cart-plus-minus-box{
-                    color: #454545;
-                    float: left;
-                    font-size: 14px;
-                    height: 40px;
-                    margin: 0;
-                    width: 110px;
-                    background: transparent none repeat scroll 0 0;
-                    border: medium none;
-                   
-                    text-align: center;
-                   &:focus{
-                    outline: none;
-                   }
-                }
-                .qtybutton{
-                    color: #454545;
-                    cursor: pointer;
-                    float: inherit;
-                    font-size: 16px;
-                    margin: 0;
-                    position: absolute;
-                    transition: all .3s ease 0s;
-                   
-                    
-                    font-weight: 600;
-                    
-                    line-height: 20px;
-                   
-                    text-align: center;
-                    width: 20px;
-                    &:hover{
-                        color: #ff5313;
-                    }
-                }
-                .dec.qtybutton{
-                    border-right: 1px solid #e5e5e5;
-                    height: 40px;
-                    left: 0;
-                    padding-top: 8px;
-                    top: 0;
-                }
-                .inc.qtybutton{
-                    border-left: 1px solid #e5e5e5;
-                    height: 40px;
-                    right: 0;
-                    padding-top: 9px;
-                    top: 0;
-                }
-            }
-            button{
-                background: #333 none repeat scroll 0 0;
-                border: medium none;
-                border-radius: 3px;
-                color: #fff;
-                cursor: pointer;
-                font-size: 14px;
-                font-weight: 700;
-                height: 40px;
-                letter-spacing: 0.025em;
-                line-height: 40px;
-                margin-left: 20px;
-                padding: 0 20px;
-                text-transform: uppercase;
-                transition: all 0.3s ease 0s;
-                &:focus{
-                    outline: none;
-                }
-                &:hover{
-                    background-color:#ff5313;
-                }
-            }
-        }
+      
         span{
             color: #666;
             font-size: 14px;
